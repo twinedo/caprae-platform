@@ -6,6 +6,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { BuyerCard, type BuyerProfile } from "@/components/profiles/buyer-card";
+import { PageLayout } from "@/components/layout/page-layout";
 import {
 	HeartIcon,
 	XMarkIcon,
@@ -159,39 +160,9 @@ export default function SellerDashboard() {
 	};
 
 	return (
-		<div className="min-h-screen bg-gradient-to-br from-secondary-50 via-white to-primary-50">
-			{/* Navigation */}
-			<nav className="border-b border-neutral-200/50 bg-white/80 backdrop-blur-sm">
-				<div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-					<div className="flex h-16 items-center justify-between">
-						<Link href="/" className="flex items-center space-x-2">
-							<div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-primary-500 to-secondary-500">
-								<HeartIcon className="h-5 w-5 text-white" />
-							</div>
-							<span className="text-xl font-bold gradient-text">Caprae</span>
-						</Link>
-
-						<div className="flex items-center space-x-4">
-							<div className="relative">
-								<BellIcon className="h-6 w-6 text-neutral-600 hover:text-primary-600 cursor-pointer transition-colors" />
-								{matches > 0 && (
-									<div className="absolute -top-2 -right-2 bg-secondary-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
-										{matches}
-									</div>
-								)}
-							</div>
-							<Link href="/dashboard/seller/profile">
-								<UserIcon className="h-6 w-6 text-neutral-600 hover:text-primary-600 cursor-pointer transition-colors" />
-							</Link>
-							<Link href="/dashboard/seller/settings">
-								<Cog6ToothIcon className="h-6 w-6 text-neutral-600 hover:text-primary-600 cursor-pointer transition-colors" />
-							</Link>
-						</div>
-					</div>
-				</div>
-			</nav>
-
-			<div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+		<PageLayout>
+			<div className="bg-gradient-to-br from-secondary-50 via-white to-primary-50 min-h-screen">
+				<div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
 				<div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
 					{/* Main Matching Interface */}
 					<div className="lg:col-span-2">
@@ -353,7 +324,8 @@ export default function SellerDashboard() {
 						</Card>
 					</div>
 				</div>
+				</div>
 			</div>
-		</div>
+		</PageLayout>
 	);
 }

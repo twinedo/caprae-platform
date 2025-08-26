@@ -7,6 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { AIInsights } from "@/components/ai/ai-insights";
 import { BusinessValuator } from "@/components/ai/business-valuator";
+import { PageLayout } from "@/components/layout/page-layout";
 import {
 	HeartIcon,
 	BellIcon,
@@ -87,34 +88,9 @@ export default function BuyerDashboard() {
 	const [activeTab, setActiveTab] = useState<"deals" | "insights" | "valuation">("deals");
 
 	return (
-		<div className="min-h-screen bg-gradient-to-br from-primary-50 via-white to-secondary-50">
-			{/* Navigation */}
-			<nav className="border-b border-neutral-200/50 bg-white/80 backdrop-blur-sm">
-				<div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-					<div className="flex h-16 items-center justify-between">
-						<Link href="/" className="flex items-center space-x-2">
-							<div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-primary-500 to-secondary-500">
-								<HeartIcon className="h-5 w-5 text-white" />
-							</div>
-							<span className="text-xl font-bold gradient-text">Caprae</span>
-						</Link>
-
-						<div className="flex items-center space-x-4">
-							<Button variant="ghost" size="sm" className="relative">
-								<BellIcon className="h-5 w-5" />
-								<span className="absolute -top-1 -right-1 h-4 w-4 bg-error-500 rounded-full text-xs text-white flex items-center justify-center">
-									7
-								</span>
-							</Button>
-							<div className="text-sm text-neutral-600">
-								Welcome back, <strong>Sarah Chen</strong>
-							</div>
-						</div>
-					</div>
-				</div>
-			</nav>
-
-			<div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+		<PageLayout>
+			<div className="bg-gradient-to-br from-primary-50 via-white to-secondary-50 min-h-screen">
+				<div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
 				{/* Dashboard Header */}
 				<motion.div
 					initial={{ opacity: 0, y: 20 }}
@@ -338,7 +314,8 @@ export default function BuyerDashboard() {
 						<BusinessValuator />
 					</motion.div>
 				)}
+				</div>
 			</div>
-		</div>
+		</PageLayout>
 	);
 }

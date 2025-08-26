@@ -74,6 +74,12 @@ export default function HomePage() {
 							<Link href="#about" className="text-neutral-600 hover:text-primary-600 transition-colors">
 								About
 							</Link>
+							<Link href="/profile" className="text-neutral-600 hover:text-primary-600 transition-colors">
+								Profile
+							</Link>
+							<Link href="/settings" className="text-neutral-600 hover:text-primary-600 transition-colors">
+								Settings
+							</Link>
 						</motion.div>
 
 						<motion.div
@@ -120,14 +126,14 @@ export default function HomePage() {
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.8, delay: 0.3 }}
 					>
-						<Link href="/auth/signup?type=buyer">
+						<Link href="/dashboard/buyer">
 							<Button size="lg" rightIcon={<UsersIcon className="h-5 w-5" />}>
-								I'm Looking to Buy
+								Buyer Dashboard
 							</Button>
 						</Link>
-						<Link href="/auth/signup?type=seller">
+						<Link href="/dashboard/seller">
 							<Button size="lg" variant="secondary" rightIcon={<ArrowTrendingUpIcon className="h-5 w-5" />}>
-								I'm Ready to Sell
+								Seller Dashboard
 							</Button>
 						</Link>
 					</motion.div>
