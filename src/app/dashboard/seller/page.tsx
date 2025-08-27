@@ -146,7 +146,7 @@ export default function SellerDashboard() {
 		}
 	};
 
-	const handleDrag = (event: any, info: PanInfo) => {
+	const handleDrag = (_: MouseEvent, info: PanInfo) => {
 		const offset = info.offset.x;
 		const velocity = info.velocity.x;
 

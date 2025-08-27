@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, ComponentType } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -38,7 +38,7 @@ interface Deal {
 
 type DealStage = "initial_contact" | "nda_signed" | "due_diligence" | "valuation" | "negotiation" | "closing" | "completed";
 
-const stageInfo: Record<DealStage, { title: string; icon: any; color: string }> = {
+const stageInfo: Record<DealStage, { title: string; icon: ComponentType<{ className?: string }>; color: string }> = {
 	initial_contact: { title: "Initial Contact", icon: ChatBubbleLeftRightIcon, color: "bg-blue-100 text-blue-700" },
 	nda_signed: { title: "NDA Signed", icon: ShieldCheckIcon, color: "bg-green-100 text-green-700" },
 	due_diligence: { title: "Due Diligence", icon: DocumentTextIcon, color: "bg-purple-100 text-purple-700" },

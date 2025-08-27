@@ -8,7 +8,6 @@ import { Button } from "@/components/ui/button";
 import { PageLayout } from "@/components/layout/page-layout";
 import {
 	BuildingOfficeIcon,
-	MapPinIcon,
 	BanknotesIcon,
 	ArrowTrendingUpIcon,
 	UsersIcon,
