@@ -2,10 +2,10 @@
 
 import * as React from "react";
 import { cn, inputVariants, type InputVariants } from "@/lib/design-system";
-import { motion } from "framer-motion";
+import { motion, type HTMLMotionProps } from "framer-motion";
 
 export interface InputProps
-	extends React.InputHTMLAttributes<HTMLInputElement>,
+	extends Omit<HTMLMotionProps<"input">, "size">,
 		InputVariants {
 	label?: string;
 	error?: string;
