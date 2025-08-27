@@ -2,15 +2,16 @@
 
 import * as React from "react";
 import { cn, buttonVariants, type ButtonVariants } from "@/lib/design-system";
-import { motion } from "framer-motion";
+import { motion, type HTMLMotionProps } from "framer-motion";
 
 export interface ButtonProps
-	extends React.ButtonHTMLAttributes<HTMLButtonElement>,
+	extends Omit<HTMLMotionProps<"button">, "children">,
 		ButtonVariants {
 	asChild?: boolean;
 	loading?: boolean;
 	leftIcon?: React.ReactNode;
 	rightIcon?: React.ReactNode;
+	children?: React.ReactNode;
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
