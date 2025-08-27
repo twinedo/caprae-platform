@@ -116,7 +116,7 @@ export default function HomePage() {
 							Reimagined
 						</h1>
 						<p className="mx-auto mt-6 max-w-2xl text-xl text-neutral-600 leading-relaxed">
-							Where sellers/buyer make the first move. Our AI-powered platform streamlines the acquisition process,
+							Where sellers/buyers make the first move. Our AI-powered platform streamlines the acquisition process,
 							making business deals feel less intimidating and more successful.
 						</p>
 					</motion.div>
