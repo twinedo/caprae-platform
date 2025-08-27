@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { PageLayout } from "@/components/layout/page-layout";
 import {
@@ -11,7 +11,6 @@ import {
 	ClockIcon,
 	CheckCircleIcon,
 	ExclamationTriangleIcon,
-	ArrowTrendingUpIcon,
 	BanknotesIcon,
 	BuildingOfficeIcon,
 	UserIcon,
@@ -248,7 +247,7 @@ export default function DealsPage() {
 							{["all", "active", "under_review", "negotiating", "closing", "completed"].map((status) => (
 								<button
 									key={status}
-									onClick={() => setFilter(status as any)}
+									onClick={() => setFilter(status as "all" | Deal["status"])}
 									className={cn(
 										"px-3 py-1 rounded-full text-sm font-medium transition-colors",
 										filter === status

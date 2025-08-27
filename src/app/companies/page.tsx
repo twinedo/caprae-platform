@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { PageLayout } from "@/components/layout/page-layout";
 import {
@@ -16,10 +16,7 @@ import {
 	StarIcon,
 	EyeIcon,
 	ChatBubbleLeftRightIcon,
-	FunnelIcon,
 	MagnifyingGlassIcon,
-	ChartBarIcon,
-	DocumentTextIcon,
 	CheckCircleIcon
 } from "@heroicons/react/24/outline";
 import { cn } from "@/lib/design-system";
@@ -492,7 +489,7 @@ export default function CompaniesPage() {
 								<span>Sort by:</span>
 								<select
 									value={sortBy}
-									onChange={(e) => setSortBy(e.target.value as any)}
+									onChange={(e) => setSortBy(e.target.value as "name" | "revenue" | "employees" | "founded")}
 									className="border border-neutral-300 rounded px-2 py-1 text-sm focus:ring-2 focus:ring-primary-500"
 								>
 									<option value="name">Company Name</option>

@@ -18,8 +18,7 @@ import {
 	BanknotesIcon,
 	ShieldCheckIcon,
 	ChatBubbleLeftRightIcon,
-	EyeIcon,
-	ExclamationTriangleIcon
+	EyeIcon
 } from "@heroicons/react/24/outline";
 import { CheckIcon as CheckSolidIcon } from "@heroicons/react/24/solid";
 import Image from "next/image";
@@ -182,7 +181,7 @@ export default function AcquisitionWorkflow() {
 							return (
 								<button
 									key={tab.id}
-									onClick={() => setActiveTab(tab.id as any)}
+									onClick={() => setActiveTab(tab.id as "overview" | "documents" | "tasks" | "optimizer" | "insights")}
 									className={`
 										flex items-center space-x-2 py-4 px-1 border-b-2 transition-colors
 										${activeTab === tab.id 

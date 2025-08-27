@@ -9,8 +9,6 @@ import { AIInsights } from "@/components/ai/ai-insights";
 import { BusinessValuator } from "@/components/ai/business-valuator";
 import { PageLayout } from "@/components/layout/page-layout";
 import {
-	HeartIcon,
-	BellIcon,
 	MagnifyingGlassIcon,
 	ChartBarIcon,
 	BanknotesIcon,
@@ -167,7 +165,7 @@ export default function BuyerDashboard() {
 							return (
 								<button
 									key={tab.id}
-									onClick={() => setActiveTab(tab.id as any)}
+									onClick={() => setActiveTab(tab.id as "deals" | "insights" | "valuation")}
 									className={cn(
 										"flex items-center space-x-2 py-4 px-1 border-b-2 transition-colors",
 										activeTab === tab.id

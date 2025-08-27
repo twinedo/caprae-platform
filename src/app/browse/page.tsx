@@ -3,17 +3,14 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { PageLayout } from "@/components/layout/page-layout";
 import {
 	MagnifyingGlassIcon,
-	FunnelIcon,
 	MapPinIcon,
-	BanknotesIcon,
 	ArrowTrendingUpIcon,
 	BuildingOfficeIcon,
-	ClockIcon,
 	StarIcon,
 	HeartIcon,
 	EyeIcon,
@@ -421,7 +418,7 @@ export default function BrowsePage() {
 								<span>Sort by:</span>
 								<select
 									value={sortBy}
-									onChange={(e) => setSortBy(e.target.value as any)}
+									onChange={(e) => setSortBy(e.target.value as "match" | "price" | "revenue" | "growth")}
 									className="border border-neutral-300 rounded px-2 py-1 text-sm focus:ring-2 focus:ring-primary-500"
 								>
 									<option value="match">Best Match</option>
