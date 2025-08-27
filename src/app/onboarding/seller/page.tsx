@@ -378,7 +378,7 @@ export default function SellerOnboardingPage() {
 							<Card>
 								<CardHeader>
 									<CardTitle className="text-2xl">Sale Preferences</CardTitle>
-									<p className="text-neutral-600">Your expectations and what's included.</p>
+									<p className="text-neutral-600">Your expectations and what&apos;s included.</p>
 								</CardHeader>
 								<CardContent className="space-y-6">
 									<Input
@@ -555,7 +555,7 @@ export default function SellerOnboardingPage() {
 									<div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-success-500 to-secondary-500">
 										<CheckIcon className="h-8 w-8 text-white" />
 									</div>
-									<CardTitle className="text-3xl mb-4">You're All Set! 🎉</CardTitle>
+									<CardTitle className="text-3xl mb-4">You&apos;re All Set! 🎉</CardTitle>
 									<p className="text-xl text-neutral-600 leading-relaxed">
 										Your business profile is complete and ready to attract qualified buyers. 
 										Now you can start receiving and reviewing buyer profiles.

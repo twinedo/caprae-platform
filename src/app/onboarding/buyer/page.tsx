@@ -215,7 +215,7 @@ export default function BuyerOnboardingPage() {
 										</div>
 									</div>
 									<Button size="lg" onClick={nextStep} rightIcon={<ArrowRightIcon className="h-5 w-5" />}>
-										Let's Get Started
+										Let&apos;s Get Started
 									</Button>
 								</CardContent>
 							</Card>

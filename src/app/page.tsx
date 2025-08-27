@@ -230,7 +230,7 @@ export default function HomePage() {
 									Ready to Transform Your Business Journey?
 								</CardTitle>
 								<CardDescription className="text-xl text-white/90">
-									Join thousands of business owners who've discovered a better way to buy and sell companies.
+									Join thousands of business owners who&apos;ve discovered a better way to buy and sell companies.
 								</CardDescription>
 							</CardHeader>
 							<CardContent>
