@@ -13,11 +13,11 @@ import {
 	ArrowRightIcon,
 	BanknotesIcon,
 	MagnifyingGlassIcon,
-	HeartIcon,
 	SparklesIcon,
 	DocumentTextIcon,
 	UsersIcon
 } from "@heroicons/react/24/outline";
+import Image from "next/image";
 
 export default function DashboardIndex() {
 	const [userType, setUserType] = useState<"buyer" | "seller" | null>(null);
@@ -81,13 +81,13 @@ export default function DashboardIndex() {
 						className="text-center mb-12"
 					>
 						<div className="flex items-center justify-center space-x-3 mb-6">
-							<div className="w-12 h-12 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-xl flex items-center justify-center">
-								<SparklesIcon className="h-6 w-6 text-white" />
+							<div className="w-12 h-12 rounded-xl overflow-hidden">
+								<Image src="/logo.png" alt="Caprae Logo" width={48} height={48} className="w-full h-full object-contain" />
 							</div>
 							<h1 className="text-4xl font-bold text-neutral-900">Choose Your Dashboard</h1>
 						</div>
 						<p className="text-xl text-neutral-600 max-w-3xl mx-auto">
-							Access your personalized dashboard based on your role. Whether you're looking to buy or sell, 
+							Access your personalized dashboard based on your role. Whether you&apos;re looking to buy or sell, 
 							we have the tools to make your business journey successful.
 						</p>
 					</motion.div>
@@ -172,7 +172,7 @@ export default function DashboardIndex() {
 									
 									<Link href="/dashboard/seller" className="group">
 										<div className="flex flex-col items-center p-4 bg-white/10 rounded-lg hover:bg-white/20 transition-colors">
-											<HeartIcon className="h-8 w-8 mb-2 group-hover:scale-110 transition-transform" />
+											<UsersIcon className="h-8 w-8 mb-2 group-hover:scale-110 transition-transform" />
 											<span className="text-sm font-medium">Find Buyers</span>
 										</div>
 									</Link>

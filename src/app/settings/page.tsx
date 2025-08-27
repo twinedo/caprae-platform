@@ -251,7 +251,7 @@ export default function SettingsPage() {
 
 						{/* Content Preferences */}
 						<div className="border-t border-neutral-200 pt-6">
-							<h4 className="font-medium text-neutral-900 mb-4">What you'll hear about</h4>
+							<h4 className="font-medium text-neutral-900 mb-4">What you&apos;ll hear about</h4>
 							<div className="space-y-4">
 								<ToggleSwitch
 									enabled={notifications.deals}

@@ -9,7 +9,6 @@ import { DocumentAnalyzer } from "@/components/ai/document-analyzer";
 import { DealOptimizer } from "@/components/ai/deal-optimizer";
 import { AIInsights } from "@/components/ai/ai-insights";
 import {
-	HeartIcon,
 	CheckIcon,
 	ClockIcon,
 	DocumentTextIcon,
@@ -23,6 +22,7 @@ import {
 	ExclamationTriangleIcon
 } from "@heroicons/react/24/outline";
 import { CheckIcon as CheckSolidIcon } from "@heroicons/react/24/solid";
+import Image from "next/image";
 
 interface Deal {
 	id: string;
@@ -86,8 +86,8 @@ export default function AcquisitionWorkflow() {
 				<div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 					<div className="flex h-16 items-center justify-between">
 						<Link href="/" className="flex items-center space-x-2">
-							<div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-primary-500 to-secondary-500">
-								<HeartIcon className="h-5 w-5 text-white" />
+							<div className="flex h-8 w-8 items-center justify-center rounded-lg overflow-hidden">
+								<Image src="/logo.png" alt="Caprae Logo" width={32} height={32} className="w-full h-full object-contain" />
 							</div>
 							<span className="text-xl font-bold gradient-text">Caprae</span>
 						</Link>

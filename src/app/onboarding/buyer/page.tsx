@@ -19,6 +19,7 @@ import {
 	ChartBarIcon,
 	LightBulbIcon
 } from "@heroicons/react/24/outline";
+import Image from "next/image";
 
 interface BuyerProfile {
 	// Basic Info
@@ -123,8 +124,8 @@ export default function BuyerOnboardingPage() {
 				<div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 					<div className="flex h-16 items-center justify-between">
 						<Link href="/" className="flex items-center space-x-2">
-							<div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-primary-500 to-secondary-500">
-								<HeartIcon className="h-5 w-5 text-white" />
+							<div className="w-8 h-8 rounded-lg overflow-hidden">
+								<Image src="/logo.png" alt="Caprae Logo" width={32} height={32} className="w-full h-full object-contain" />
 							</div>
 							<span className="text-xl font-bold gradient-text">Caprae</span>
 						</Link>
@@ -186,12 +187,12 @@ export default function BuyerOnboardingPage() {
 						>
 							<Card className="text-center" padding="lg">
 								<CardHeader>
-									<div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-primary-500 to-secondary-500">
-										<HeartIcon className="h-8 w-8 text-white" />
+									<div className="mx-auto mb-6 w-16 h-16 rounded-xl overflow-hidden">
+										<Image src="/logo.png" alt="Caprae Logo" width={64} height={64} className="w-full h-full object-contain" />
 									</div>
 									<CardTitle className="text-3xl mb-4">Welcome to Caprae!</CardTitle>
 									<p className="text-xl text-neutral-600 leading-relaxed">
-										We're excited to help you find the perfect business acquisition. 
+										We&apos;re excited to help you find the perfect business acquisition. 
 										This quick setup will help us understand your goals and match you with ideal opportunities.
 									</p>
 								</CardHeader>

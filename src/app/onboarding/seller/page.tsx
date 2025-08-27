@@ -20,6 +20,7 @@ import {
 	SparklesIcon,
 	RocketLaunchIcon
 } from "@heroicons/react/24/outline";
+import Image from "next/image";
 
 interface SellerProfile {
 	// Business Basics
@@ -130,8 +131,8 @@ export default function SellerOnboardingPage() {
 				<div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 					<div className="flex h-16 items-center justify-between">
 						<Link href="/" className="flex items-center space-x-2">
-							<div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-primary-500 to-secondary-500">
-								<HeartIcon className="h-5 w-5 text-white" />
+							<div className="w-8 h-8 rounded-lg overflow-hidden">
+								<Image src="/logo.png" alt="Caprae Logo" width={32} height={32} className="w-full h-full object-contain" />
 							</div>
 							<span className="text-xl font-bold gradient-text">Caprae</span>
 						</Link>
@@ -198,7 +199,7 @@ export default function SellerOnboardingPage() {
 									</div>
 									<CardTitle className="text-3xl mb-4">Ready to Sell Your Business?</CardTitle>
 									<p className="text-xl text-neutral-600 leading-relaxed">
-										Congratulations on building something valuable! Let's create a compelling profile 
+										Congratulations on building something valuable! Let&apos;s create a compelling profile 
 										that attracts the right buyers and tells your business story authentically.
 									</p>
 								</CardHeader>
@@ -438,7 +439,7 @@ export default function SellerOnboardingPage() {
 
 									<div>
 										<label className="block text-sm font-medium text-neutral-700 mb-3">
-											What's Included in the Sale?
+											What&apos;s Included in the Sale?
 										</label>
 										<div className="grid grid-cols-2 gap-2">
 											{assetOptions.map((asset) => (

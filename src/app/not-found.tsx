@@ -9,11 +9,11 @@ import {
 	MagnifyingGlassIcon,
 	ArrowLeftIcon,
 	ExclamationTriangleIcon,
-	HeartIcon,
 	ChartBarIcon,
 	UserIcon,
 	CogIcon
 } from "@heroicons/react/24/outline";
+import Image from "next/image";
 
 export default function NotFound() {
 	const quickLinks = [
@@ -60,8 +60,8 @@ export default function NotFound() {
 					className="text-center mb-8"
 				>
 					<Link href="/" className="inline-flex items-center space-x-3 mb-6">
-						<div className="w-12 h-12 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-xl flex items-center justify-center">
-							<HeartIcon className="h-6 w-6 text-white" />
+						<div className="w-12 h-12 rounded-xl overflow-hidden">
+							<Image src="/logo.png" alt="Caprae Logo" width={48} height={48} className="w-full h-full object-contain" />
 						</div>
 						<span className="text-2xl font-bold text-neutral-900">Caprae</span>
 					</Link>
@@ -105,8 +105,8 @@ export default function NotFound() {
 									Page Not Found
 								</h1>
 								<p className="text-lg text-neutral-600 max-w-2xl mx-auto leading-relaxed">
-									We couldn't find the page you're looking for. It might have been moved, deleted, 
-									or you entered the wrong URL. Don't worry, let's get you back on track!
+									We couldn&apos;t find the page you&apos;re looking for. It might have been moved, deleted, 
+									or you entered the wrong URL. Don&apos;t worry, let&apos;s get you back on track!
 								</p>
 							</motion.div>
 

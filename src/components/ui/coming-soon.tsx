@@ -156,7 +156,7 @@ export function ComingSoon({
 										Explore Available Features
 									</h3>
 									<p className="text-neutral-600">
-										While we're building this feature, check out what's already available
+										While we&apos;re building this feature, check out what&apos;s already available
 									</p>
 								</div>
 								

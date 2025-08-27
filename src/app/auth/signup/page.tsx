@@ -85,7 +85,7 @@ export default function SignupPage() {
 								<div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-primary-100">
 									<UsersIcon className="h-6 w-6 text-primary-600" />
 								</div>
-								<CardTitle className="text-xl">I'm a Buyer</CardTitle>
+								<CardTitle className="text-xl">I&apos;m a Buyer</CardTitle>
 								<p className="text-neutral-600">
 									Looking to acquire businesses and grow my portfolio
 								</p>
@@ -101,7 +101,7 @@ export default function SignupPage() {
 								<div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-secondary-100">
 									<ArrowTrendingUpIcon className="h-6 w-6 text-secondary-600" />
 								</div>
-								<CardTitle className="text-xl">I'm a Seller</CardTitle>
+								<CardTitle className="text-xl">I&apos;m a Seller</CardTitle>
 								<p className="text-neutral-600">
 									Ready to sell my business and find the right buyer
 								</p>

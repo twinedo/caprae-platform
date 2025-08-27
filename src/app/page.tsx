@@ -177,7 +177,7 @@ export default function HomePage() {
 							Why Choose Caprae?
 						</h2>
 						<p className="text-xl text-neutral-600 max-w-3xl mx-auto">
-							We've reimagined every step of the acquisition process to reduce friction, 
+							We&apos;ve reimagined every step of the acquisition process to reduce friction, 
 							increase transparency, and maximize deal success.
 						</p>
 					</motion.div>
