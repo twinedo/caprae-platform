@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, Suspense } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
@@ -10,7 +10,8 @@ import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { EyeIcon, EyeSlashIcon, UsersIcon, ArrowTrendingUpIcon } from "@heroicons/react/24/outline";
 
-export default function SignupPage() {
+// Separate component that uses useSearchParams
+function SignupContent() {
 	const searchParams = useSearchParams();
 	const [userType, setUserType] = useState<"buyer" | "seller" | null>(
 		(searchParams?.get("type") as "buyer" | "seller") || null
@@ -302,5 +303,23 @@ export default function SignupPage() {
 				</CardContent>
 			</Card>
 		</AuthLayout>
+	);
+}
+
+// Main page component with Suspense boundary
+export default function SignupPage() {
+	return (
+		<Suspense fallback={
+			<AuthLayout
+				title="Join Caprae"
+				subtitle="Loading..."
+			>
+				<div className="flex items-center justify-center py-8">
+					<div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary-600" />
+				</div>
+			</AuthLayout>
+		}>
+			<SignupContent />
+		</Suspense>
 	);
 }
