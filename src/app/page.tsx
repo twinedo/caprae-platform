@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowRightIcon, HeartIcon, ShieldCheckIcon, ArrowTrendingUpIcon, UsersIcon, BoltIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
+import Image from "next/image";
 
 const features = [
 	{
@@ -53,8 +54,8 @@ export default function HomePage() {
 							animate={{ opacity: 1, x: 0 }}
 							transition={{ duration: 0.5 }}
 						>
-							<div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-primary-500 to-secondary-500">
-								<HeartIcon className="h-5 w-5 text-white" />
+							<div className="flex h-8 w-8 items-center justify-center rounded-lg overflow-hidden">
+								<Image src="/logo.png" alt="Caprae Logo" width={32} height={32} className="w-full h-full object-contain" />
 							</div>
 							<span className="text-xl font-bold gradient-text">Caprae</span>
 						</motion.div>
@@ -256,8 +257,8 @@ export default function HomePage() {
 				<div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
 					<div className="flex flex-col md:flex-row justify-between items-center">
 						<div className="flex items-center space-x-2 mb-4 md:mb-0">
-							<div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-primary-500 to-secondary-500">
-								<HeartIcon className="h-5 w-5 text-white" />
+							<div className="flex h-8 w-8 items-center justify-center rounded-lg overflow-hidden">
+								<Image src="/logo.png" alt="Caprae Logo" width={32} height={32} className="w-full h-full object-contain" />
 							</div>
 							<span className="text-xl font-bold gradient-text">Caprae</span>
 						</div>

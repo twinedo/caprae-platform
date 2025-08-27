@@ -20,6 +20,7 @@ import {
 } from "@heroicons/react/24/outline";
 import { cn } from "@/lib/design-system";
 import { LogOutIcon } from "lucide-react";
+import Image from "next/image";
 
 interface NavigationItem {
   name: string;
@@ -59,8 +60,8 @@ export function MainNavigation() {
           {/* Logo */}
           <div className="flex h-16 shrink-0 items-center">
             <div className="flex items-center space-x-3">
-              <div className="w-8 h-8 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">C</span>
+              <div className="w-8 h-8 rounded-lg overflow-hidden">
+                <Image src="/logo.png" alt="Caprae Logo" width={32} height={32} className="w-full h-full object-contain" />
               </div>
               <span className="text-xl font-bold text-neutral-900">Caprae</span>
             </div>
@@ -189,8 +190,8 @@ export function MainNavigation() {
             >
               <div className="flex items-center justify-between">
                 <div className="flex items-center space-x-3">
-                  <div className="w-8 h-8 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-lg flex items-center justify-center">
-                    <span className="text-white font-bold text-sm">C</span>
+                  <div className="w-8 h-8 rounded-lg overflow-hidden">
+                    <Image src="/logo.png" alt="Caprae Logo" width={32} height={32} className="w-full h-full object-contain" />
                   </div>
                   <span className="text-xl font-bold text-neutral-900">Caprae</span>
                 </div>
